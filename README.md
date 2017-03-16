@@ -6,7 +6,7 @@ This survey was built upon request for the HR team to track job satisfaction and
 
 ### Things that are required in this build
 - [ ] Post survey results to a database
-- [ ] Autocomplete job titles (console.err saying autocomplete is not a function)
+- [x] Autocomplete job titles (console.err saying autocomplete is not a function)
 - [ ] Display results overall
 - [ ] Display results by individual
 - [ ] Display results by locations
