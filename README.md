@@ -11,6 +11,7 @@ The database is connection is set up. We need to make thank-you.php actually pos
 - [x] Post survey results to a database
 - [x] Autocomplete job titles
 - [ ] Complete thank you page design
+- [ ] Form validation
 - [ ] Display results overall
 - [ ] Display results by individual
 - [ ] Display results by locations
