@@ -1,6 +1,6 @@
 <?php
 include 'includes/header.php';
-include 'connection/connection.php';
+require 'connection/connection.php';
 ?>
 
 <nav>
@@ -21,11 +21,11 @@ include 'connection/connection.php';
 
 		<div class="row">
 			<div class="input-field col s6">
-				<input id="first_name" type="text" class="validate">
+				<input id="first_name" type="text" class="validate" name="first_name">
 				<label for="first_name">First Name</label>
 			</div>
 			<div class="input-field col s6">
-				<input id="last_name" type="text" class="validate">
+				<input id="last_name" type="text" class="validate" name="last_name">
 				<label for="last_name">Last Name</label>
 			</div>
 		</div>
@@ -63,7 +63,7 @@ include 'connection/connection.php';
 
 		<div class="row">
 			<div class="input-field col s12">
-				<textarea id="exit_reason" class="materialize-textarea"></textarea>
+				<textarea id="exit_reason" class="materialize-textarea" name="exit_reason"></textarea>
 				<label for="exit_reason">Reason for leaving</label>
 			</div>
 		</div>
@@ -72,15 +72,15 @@ include 'connection/connection.php';
         	<div class="input-field col s12">
         		<p>1. I had the opportunity to do challenging work:</p>
 				<p>
-					<input class="with-gap" name="question_one" type="radio" id="agree_1" />
+					<input class="with-gap" name="question_one" type="radio" id="agree_1" value="agree" />
 					<label for="agree_1">Agree</label>
 				</p>
 				<p>
-					<input class="with-gap" name="question_one" type="radio" id="neutral_1" />
+					<input class="with-gap" name="question_one" type="radio" id="neutral_1" value="neutral" />
 					<label for="neutral_1">Neutral</label>
 				</p>
 				<p>
-					<input class="with-gap" name="question_one" type="radio" id="disagree_1"  />
+					<input class="with-gap" name="question_one" type="radio" id="disagree_1" value="disagree" />
 					<label for="disagree_1">Disagree</label>
 				</p>
         	</div>
@@ -90,15 +90,15 @@ include 'connection/connection.php';
         	<div class="input-field col s12">
         		<p>2. My job made good use of my skills:</p>
 				<p>
-					<input class="with-gap" name="question_two" type="radio" id="agree_2" />
+					<input class="with-gap" name="question_two" type="radio" id="agree_2" value="agree" />
 					<label for="agree_2">Agree</label>
 				</p>
 				<p>
-					<input class="with-gap" name="question_two" type="radio" id="neutral_2" />
+					<input class="with-gap" name="question_two" type="radio" id="neutral_2" value="neutral" />
 					<label for="neutral_2">Neutral</label>
 				</p>
 				<p>
-					<input class="with-gap" name="question_two" type="radio" id="disagree_2"  />
+					<input class="with-gap" name="question_two" type="radio" id="disagree_2" value="disagree" />
 					<label for="disagree_2">Disagree</label>
 				</p>
         	</div>
@@ -108,15 +108,15 @@ include 'connection/connection.php';
         	<div class="input-field col s12">
         		<p>3. I was satisfied with my opportunity to develop new skills:</p>
 				<p>
-					<input class="with-gap" name="question_three" type="radio" id="agree_3" />
+					<input class="with-gap" name="question_three" type="radio" id="agree_3" value="agree" />
 					<label for="agree_3">Agree</label>
 				</p>
 				<p>
-					<input class="with-gap" name="question_three" type="radio" id="neutral_3" />
+					<input class="with-gap" name="question_three" type="radio" id="neutral_3" value="neutral" />
 					<label for="neutral_3">Neutral</label>
 				</p>
 				<p>
-					<input class="with-gap" name="question_three" type="radio" id="disagree_3"  />
+					<input class="with-gap" name="question_three" type="radio" id="disagree_3" value="disagree" />
 					<label for="disagree_3">Disagree</label>
 				</p>
         	</div>
@@ -126,16 +126,16 @@ include 'connection/connection.php';
         	<div class="input-field col s12">
         		<p>4. I felt encourage to come up with better ways of doing things:</p>
 				<p>
-					<input class="with-gap" name="question_four" type="radio" id="agree_4" />
+					<input class="with-gap" name="question_four" type="radio" id="agree_4" value="agree" />
 					<label for="agree_4">Agree</label>
 				</p>
 				<p>
-					<input class="with-gap" name="question_four" type="radio" id="neutral_4" />
+					<input class="with-gap" name="question_four" type="radio" id="neutral_4" value="neutral" />
 					<label for="neutral_4">Neutral</label>
 				</p>
 				<p>
-					<input class="with-gap" name="question_four" type="radio" id="neutral_4"  />
-					<label for="neutral_4">Disagree</label>
+					<input class="with-gap" name="question_four" type="radio" id="disagree_4" value="disagree" />
+					<label for="disagree_4">Disagree</label>
 				</p>
         	</div>
         </div>
@@ -144,15 +144,15 @@ include 'connection/connection.php';
         	<div class="input-field col s12">
         		<p>5. I was satisfied with my opportunity to get a better job in the dealership:</p>
 				<p>
-					<input class="with-gap" name="question_five" type="radio" id="agree_5" />
+					<input class="with-gap" name="question_five" type="radio" id="agree_5" value="agree" />
 					<label for="agree_5">Agree</label>
 				</p>
 				<p>
-					<input class="with-gap" name="question_five" type="radio" id="neutral_5" />
+					<input class="with-gap" name="question_five" type="radio" id="neutral_5" value="neutral" />
 					<label for="neutral_5">Neutral</label>
 				</p>
 				<p>
-					<input class="with-gap" name="question_five" type="radio" id="disagree_5"  />
+					<input class="with-gap" name="question_five" type="radio" id="disagree_5" value="disagree"  />
 					<label for="disagree_5">Disagree</label>
 				</p>
         	</div>
@@ -162,15 +162,15 @@ include 'connection/connection.php';
         	<div class="input-field col s12">
         		<p>6. I felt well informed about what was expected in my job:</p>
 				<p>
-					<input class="with-gap" name="question_six" type="radio" id="agree_6" />
+					<input class="with-gap" name="question_six" type="radio" id="agree_6" value="agree" />
 					<label for="agree_6">Agree</label>
 				</p>
 				<p>
-					<input class="with-gap" name="question_six" type="radio" id="neutral_6" />
+					<input class="with-gap" name="question_six" type="radio" id="neutral_6" value="neutral" />
 					<label for="neutral_6">Neutral</label>
 				</p>
 				<p>
-					<input class="with-gap" name="question_six" type="radio" id="disagree_6"  />
+					<input class="with-gap" name="question_six" type="radio" id="disagree_6" value="disagree"  />
 					<label for="disagree_6">Disagree</label>
 				</p>
         	</div>
@@ -180,15 +180,15 @@ include 'connection/connection.php';
         	<div class="input-field col s12">
         		<p>7. I was satisfied with the recognition I recieved for doing a good job:</p>
 				<p>
-					<input class="with-gap" name="question_seven" type="radio" id="agree_7" />
+					<input class="with-gap" name="question_seven" type="radio" id="agree_7" value="agree" />
 					<label for="agree_7">Agree</label>
 				</p>
 				<p>
-					<input class="with-gap" name="question_seven" type="radio" id="neutral_7" />
+					<input class="with-gap" name="question_seven" type="radio" id="neutral_7" value="neutral" />
 					<label for="neutral_7">Neutral</label>
 				</p>
 				<p>
-					<input class="with-gap" name="question_seven" type="radio" id="disagree_7"  />
+					<input class="with-gap" name="question_seven" type="radio" id="disagree_7" value="disagree" />
 					<label for="disagree_7">Disagree</label>
 				</p>
         	</div>
@@ -198,16 +198,16 @@ include 'connection/connection.php';
         	<div class="input-field col s12">
         		<p>8. I was satisfied with the cooperation and communiction between my coworkers:</p>
 				<p>
-					<input class="with-gap" name="question_eight" type="radio" id="agree_8" />
+					<input class="with-gap" name="question_eight" type="radio" id="agree_8" value="agree" />
 					<label for="agree_8">Agree</label>
 				</p>
 				<p>
-					<input class="with-gap" name="question_eight" type="radio" id="neutral_9" />
-					<label for="neutral_9">Neutral</label>
+					<input class="with-gap" name="question_eight" type="radio" id="neutral_8" value="neutral" />
+					<label for="neutral_8">Neutral</label>
 				</p>
 				<p>
-					<input class="with-gap" name="question_eight" type="radio" id="disagree_9"  />
-					<label for="disagree_9">Disagree</label>
+					<input class="with-gap" name="question_eight" type="radio" id="disagree_8" value="disagree" />
+					<label for="disagree_8">Disagree</label>
 				</p>
         	</div>
         </div>
@@ -216,16 +216,16 @@ include 'connection/connection.php';
         	<div class="input-field col s12">
         		<p>9. My supervisor was considerate of my need to balance work and personal life:</p>
 				<p>
-					<input class="with-gap" name="question_nine" type="radio" id="test1" />
-					<label for="test1">Agree</label>
+					<input class="with-gap" name="question_nine" type="radio" id="agree_9" value="agree" />
+					<label for="agree_9">Agree</label>
 				</p>
 				<p>
-					<input class="with-gap" name="question_nine" type="radio" id="test2" />
-					<label for="test2">Neutral</label>
+					<input class="with-gap" name="question_nine" type="radio" id="neutral_9" value="neutral" />
+					<label for="neutral_9">Neutral</label>
 				</p>
 				<p>
-					<input class="with-gap" name="question_nine" type="radio" id="test3"  />
-					<label for="test3">Disagree</label>
+					<input class="with-gap" name="question_nine" type="radio" id="disagree_9" value="disagree"  />
+					<label for="disagree_9">Disagree</label>
 				</p>
         	</div>
         </div>
@@ -234,16 +234,16 @@ include 'connection/connection.php';
         	<div class="input-field col s12">
         		<p>10. I received ongoing feedback that helped me improve my performance:</p>
 				<p>
-					<input class="with-gap" name="question_ten" type="radio" id="test1" />
-					<label for="test1">Agree</label>
+					<input class="with-gap" name="question_ten" type="radio" id="agree_10" value="agree" />
+					<label for="agree_10">Agree</label>
 				</p>
 				<p>
-					<input class="with-gap" name="question_ten" type="radio" id="test2" />
-					<label for="test2">Neutral</label>
+					<input class="with-gap" name="question_ten" type="radio" id="neutral_10" value="neutral" />
+					<label for="neutral_10">Neutral</label>
 				</p>
 				<p>
-					<input class="with-gap" name="question_ten" type="radio" id="test3"  />
-					<label for="test3">Disagree</label>
+					<input class="with-gap" name="question_ten" type="radio" id="disagree_10" value="disagree" />
+					<label for="disagree_10">Disagree</label>
 				</p>
         	</div>
         </div>
@@ -252,15 +252,15 @@ include 'connection/connection.php';
         	<div class="input-field col s12">
         		<p>11. Overall, I fell my supervisor did a good job:</p>
 				<p>
-					<input class="with-gap" name="question_eleven" type="radio" id="agree_11" />
+					<input class="with-gap" name="question_eleven" type="radio" id="agree_11" value="agree" />
 					<label for="agree_11">Agree</label>
 				</p>
 				<p>
-					<input class="with-gap" name="question_eleven" type="radio" id="neutral_11" />
+					<input class="with-gap" name="question_eleven" type="radio" id="neutral_11" value="neutral" />
 					<label for="neutral_11">Neutral</label>
 				</p>
 				<p>
-					<input class="with-gap" name="question_eleven" type="radio" id="disagree_11"  />
+					<input class="with-gap" name="question_eleven" type="radio" id="disagree_11" value="disagree" />
 					<label for="disagree_11">Disagree</label>
 				</p>
         	</div>
@@ -270,11 +270,11 @@ include 'connection/connection.php';
         	<div class="input-field col s12">
         		<p>12. I would recommend Hutson Inc. as a good place to work:</p>
 				<p>
-					<input class="with-gap" name="question_twelve" type="radio" id="yes_12" />
+					<input class="with-gap" name="question_twelve" type="radio" id="yes_12" value="yes" />
 					<label for="yes_12">Yes</label>
 				</p>
 				<p>
-					<input class="with-gap" name="question_twelve" type="radio" id="no_12" />
+					<input class="with-gap" name="question_twelve" type="radio" id="no_12" value="no" />
 					<label for="no_12">No</label>
 				</p>
         	</div>
@@ -291,15 +291,15 @@ include 'connection/connection.php';
         	<div class="input-field col s12">
         		<p>13. How would you rate the total compensation & benefit package you received while working at Hutson In (Salary, Health Benefits, Vacation/Holidays, Retirement Program)?</p>
 				<p>
-					<input class="with-gap" name="question_thirteen" type="radio" id="below_average_13" />
+					<input class="with-gap" name="question_thirteen" type="radio" id="below_average_13" value="below average" />
 					<label for="below_average_13">Below Average</label>
 				</p>
 				<p>
-					<input class="with-gap" name="question_thirteen" type="radio" id="average_13" />
+					<input class="with-gap" name="question_thirteen" type="radio" id="average_13" value="average" />
 					<label for="average_13">Average</label>
 				</p>
 				<p>
-					<input class="with-gap" name="question_thirteen" type="radio" id="above_average_13" />
+					<input class="with-gap" name="question_thirteen" type="radio" id="above_average_13" value="above average" />
 					<label for="above_average_13">Above Average</label>
 				</p>
         	</div>

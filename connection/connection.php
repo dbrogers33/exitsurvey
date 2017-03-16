@@ -2,11 +2,11 @@
 
 $servername = "localhost";
 $username = "root";
-$password = "root"; //Password for MAMP is 'root' and XAMP is ''
+$password = ""; //Password for MAMP is 'root' and XAMP is ''
 $dbname = "exitsurvey";
 
 // Create connection
-$conn = new mysqli($servername, $username, $password, $exitsurvey);
+$conn = new mysqli($servername, $username, $password, $dbname);
 
 // Check connection
 if ($conn->connect_error) {
