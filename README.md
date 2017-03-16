@@ -10,10 +10,12 @@ The database is connection is set up. We need to make thank-you.php actually pos
 ### Things that are required in this build
 - [x] Post survey results to a database
 - [x] Autocomplete job titles
-- [ ] Complete thank you page design
+- [x] Complete thank you page design
 - [ ] Form validation
 - [ ] Display results overall
-- [ ] Display results by individual
+- [ ] Display results by individual (current)
+  - [ ] Fix sidebar nav when
+  - [ ] Get results to display
 - [ ] Display results by locations
 - [ ] Email survey from dashboard (use mailgun)
 - [ ] Track how many completed survey and send automated follow up email to those who didn't

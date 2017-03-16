@@ -5,7 +5,7 @@ require 'connection/connection.php';
 
 <nav>
 	<div class="nav-wrapper">
-		<a href="#" class="brand-logo">Hutson Inc Exit Survey</a>
+		<a href="#" class="brand-logo center">Hutson Inc Exit Survey</a>
 	</div>
 </nav>
 

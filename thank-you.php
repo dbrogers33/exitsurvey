@@ -30,17 +30,19 @@ $what_did_you_like_least = mysql_real_escape_string($_POST['what_did_you_like_le
 // Posting to SQL
 $sql = "INSERT INTO exitsurvey_answers (first_name, last_name, job_title, location, exit_reason, question_one, question_two, question_three, question_four, question_five, question_six, question_seven, question_eight, question_nine, question_ten, question_eleven, question_twelve, why, question_thirteen, what_did_you_like, what_did_you_like_least) VALUES ('$first_name', '$last_name', '$job_title', '$location', '$exit_reason', '$question_one', '$question_two', '$question_three', '$question_four', '$question_five', '$question_six', '$question_seven', '$question_eight', '$question_nine', '$question_ten', '$question_eleven', '$question_twelve', '$why', '$question_thirteen', '$what_did_you_like', '$what_did_you_like_least')";
 
-if (mysqli_query($conn, $sql)) {
-	echo "Records added";
-} else {
-	echo "ERROR: Could not store records " . mysqli_error($conn);;
-};
-
 mysqli_close($conn);
-
 
 ?>
 
+<nav>
+	<div class="nav-wrapper">
+		<a href="#" class="brand-logo center">Hutson Inc Exit Survey</a>
+	</div>
+</nav>
+
+<div class="container">
+	<p class="flow-text">Thank you for taking time to complete the survey, <strong><?php echo $first_name; ?></strong>. We appreciate your feedback.</p>
+</div>
 
 
 <?php
