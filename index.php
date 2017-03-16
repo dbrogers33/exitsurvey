@@ -1,5 +1,6 @@
-<?php 
-include 'includes/header.php';  
+<?php
+include 'includes/header.php';
+include 'connection/connection.php';
 ?>
 
 <nav>
@@ -10,10 +11,14 @@ include 'includes/header.php';
 
 <div class="container">
 
+<div class="row">
+	<p>Paragraph about the survey. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+
 <!-- FORM -->
 <div class="row">
-	<form class="col s12">
-		
+	<form class="col s12" action="thank-you.php" method="post">
+
 		<div class="row">
 			<div class="input-field col s6">
 				<input id="first_name" type="text" class="validate">
@@ -26,37 +31,36 @@ include 'includes/header.php';
 		</div>
 
 		<div class="row">
-			
+
 			<div class="input-field col s6">
-				<input type="text" id="autocomplete-input" class="autocomplete">
+				<input type="text" id="autocomplete-input" class="autocomplete" name="job_title">
 				<label for="autocomplete-input">Job Title</label>
 			</div>
 
 
 
 			<div class="input-field col s6">
-			    <select>
+			    <select name="location">
 			    	<option value="" disabled selected="">Choose your store location</option>
-					<option value="0">Murray</option>
-					<option value="1">Mayfield</option>
-					<option value="2">Princeton</option>
-					<option value="3">Russellville</option>
-					<option value="3">Morganfield</option>
-					<option value="3">Morganfield</option>
-					<option value="3">Clarksville</option>
-					<option value="3">Clinton</option>
-					<option value="3">Cypress</option>
-					<option value="3">Paducah</option>
-					<option value="3">Hopkinsville</option>
-					<option value="3">Jasper</option>
-					<option value="3">Evansville</option>
-					<option value="3">Poseyville</option>
-					<option value="3">Newberry</option>
+						<option value="Murray">Murray</option>
+						<option value="Mayfield">Mayfield</option>
+						<option value="Princeton">Princeton</option>
+						<option value="Russellville">Russellville</option>
+						<option value="Morganfield">Morganfield</option>
+						<option value="Clarksville">Clarksville</option>
+						<option value="Clinton">Clinton</option>
+						<option value="Cypress">Cypress</option>
+						<option value="Paducah">Paducah</option>
+						<option value="Hopkinsville">Hopkinsville</option>
+						<option value="Jasper">Jasper</option>
+						<option value="Evansville">Evansville</option>
+						<option value="Poseyville">Poseyville</option>
+						<option value="Newberry">Newberry</option>
 			    </select>
 			    <label>Store Location</label>
 			</div>
 		</div>
-		
+
 		<div class="row">
 			<div class="input-field col s12">
 				<textarea id="exit_reason" class="materialize-textarea"></textarea>
@@ -278,7 +282,7 @@ include 'includes/header.php';
 
         <div class="row">
 			<div class="input-field col s12">
-				<textarea id="why" class="materialize-textarea"></textarea>
+				<textarea id="why" class="materialize-textarea" name="why"></textarea>
 				<label for="why">Why or why not:</label>
 			</div>
 		</div>
@@ -303,14 +307,14 @@ include 'includes/header.php';
 
         <div class="row">
 			<div class="input-field col s12">
-				<textarea id="what_did_you_like" class="materialize-textarea"></textarea>
+				<textarea id="what_did_you_like" class="materialize-textarea" name="what_did_you_like"></textarea>
 				<label for="what_did_you_like">What did you like most about working for Hutson Inc:</label>
 			</div>
 		</div>
 
 		<div class="row">
 			<div class="input-field col s12">
-				<textarea id="what_did_you_like_least" class="materialize-textarea"></textarea>
+				<textarea id="what_did_you_like_least" class="materialize-textarea" name="what_did_you_like_least"></textarea>
 				<label for="what_did_you_like_least">What did you like least about working for Hutson Inc:</label>
 			</div>
 		</div>

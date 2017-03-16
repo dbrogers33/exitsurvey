@@ -4,9 +4,12 @@ Hutson Inc Exit Survey
 ## Scope
 This survey was built upon request for the HR team to track job satisfaction and reasons for leaving. It will use materializecss for the front end and PHP/SQLite for the backend.
 
+### What are the next steps in this build?
+The database is connection is set up. We need to make thank-you.php actually post the data to the database.
+
 ### Things that are required in this build
 - [ ] Post survey results to a database
-- [x] Autocomplete job titles (console.err saying autocomplete is not a function)
+- [x] Autocomplete job titles
 - [ ] Display results overall
 - [ ] Display results by individual
 - [ ] Display results by locations
