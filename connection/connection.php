@@ -1,9 +1,18 @@
 <?php
 
-$servername = "localhost";
-$username = "root";
+
+$servername = "localhost"; //always localhost
+$username = "root"; //root on localhost
 $password = ""; //Password for MAMP is 'root' and XAMP is ''
-$dbname = "exitsurvey";
+$dbname = "exitsurvey"; //exit survey when on localhost
+
+
+/* CONNECTION TO LIVE SERVER
+$servername = "localhost"; //always localhost
+$username = "w5s4g1n7_denham"; //root on localhost
+$password = "denham.33"; //Password for MAMP is 'root' and XAMP is ''
+$dbname = "w5s4g1n7_exitsurvey"; //exit survey when on localhost
+*/
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);

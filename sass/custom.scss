@@ -1,0 +1,21 @@
+li > .row {
+	margin-bottom: 0px;
+	margin-right: 0px !important;
+	margin-left: 0px !important;
+}
+
+.invalid {
+	color: red !important;
+}
+
+/* -- Add this back in version 2 --
+header, main, footer {
+   	padding-left: 300px;
+}
+
+@media only screen and (max-width : 992px) {
+    header, main, footer {
+       padding-left: 0;
+    }
+}
+------------------- */

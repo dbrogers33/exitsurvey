@@ -6,7 +6,7 @@
 	});
 </script>
 
-<footer class="page-footer">
+<footer class="page-footer green darken-4">
 	<div class="footer-copyright">
 		<div class="container">
 			© <?php echo date("Y"); ?> Hutson Inc.

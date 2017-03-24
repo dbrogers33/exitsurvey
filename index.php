@@ -4,58 +4,56 @@ require 'connection/connection.php';
 ?>
 
 <nav>
-	<div class="nav-wrapper">
+	<div class="nav-wrapper green darken-4">
 		<a href="#" class="brand-logo center">Hutson Inc Exit Survey</a>
 	</div>
 </nav>
 
 <div class="container">
 
-<div class="row">
-	<p>Paragraph about the survey. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-</div>
+
 
 <!-- FORM -->
 <div class="row">
-	<form class="col s12" action="thank-you.php" method="post">
+	<form class="col s12" action="thank-you" method="post" name="exit-survey" onsubmit="return validateForm()" autocomplete="off">
 
 		<div class="row">
 			<div class="input-field col s6">
-				<input id="first_name" type="text" class="validate" name="first_name">
-				<label for="first_name">First Name</label>
+				<input id="first_name" type="text" class="validate" name="first_name" required>
+				<label for="first_name" class="" id="first-name-label">First Name</label>
 			</div>
 			<div class="input-field col s6">
-				<input id="last_name" type="text" class="validate" name="last_name">
-				<label for="last_name">Last Name</label>
+				<input id="last_name" type="text" class="validate" name="last_name" required>
+				<label for="last_name" id="last-name-label">Last Name</label>
 			</div>
 		</div>
 
 		<div class="row">
 
 			<div class="input-field col s6">
-				<input type="text" id="autocomplete-input" class="autocomplete" name="job_title">
+				<input type="text" id="autocomplete-input" class="autocomplete" name="job_title" required>
 				<label for="autocomplete-input">Job Title</label>
 			</div>
 
 
 
 			<div class="input-field col s6">
-			    <select name="location">
+			    <select name="location" required>
 			    	<option value="" disabled selected="">Choose your store location</option>
-						<option value="Murray">Murray</option>
-						<option value="Mayfield">Mayfield</option>
-						<option value="Princeton">Princeton</option>
-						<option value="Russellville">Russellville</option>
-						<option value="Morganfield">Morganfield</option>
-						<option value="Clarksville">Clarksville</option>
-						<option value="Clinton">Clinton</option>
-						<option value="Cypress">Cypress</option>
-						<option value="Paducah">Paducah</option>
-						<option value="Hopkinsville">Hopkinsville</option>
-						<option value="Jasper">Jasper</option>
-						<option value="Evansville">Evansville</option>
-						<option value="Poseyville">Poseyville</option>
-						<option value="Newberry">Newberry</option>
+					<option value="Murray">Murray</option>
+					<option value="Mayfield">Mayfield</option>
+					<option value="Princeton">Princeton</option>
+					<option value="Russellville">Russellville</option>
+					<option value="Morganfield">Morganfield</option>
+					<option value="Clarksville">Clarksville</option>
+					<option value="Clinton">Clinton</option>
+					<option value="Cypress">Cypress</option>
+					<option value="Paducah">Paducah</option>
+					<option value="Hopkinsville">Hopkinsville</option>
+					<option value="Jasper">Jasper</option>
+					<option value="Evansville">Evansville</option>
+					<option value="Poseyville">Poseyville</option>
+					<option value="Newberry">Newberry</option>
 			    </select>
 			    <label>Store Location</label>
 			</div>
@@ -63,7 +61,7 @@ require 'connection/connection.php';
 
 		<div class="row">
 			<div class="input-field col s12">
-				<textarea id="exit_reason" class="materialize-textarea" name="exit_reason"></textarea>
+				<textarea id="exit_reason" class="materialize-textarea" name="exit_reason" required></textarea>
 				<label for="exit_reason">Reason for leaving</label>
 			</div>
 		</div>
@@ -72,7 +70,7 @@ require 'connection/connection.php';
         	<div class="input-field col s12">
         		<p>1. I had the opportunity to do challenging work:</p>
 				<p>
-					<input class="with-gap" name="question_one" type="radio" id="agree_1" value="agree" />
+					<input class="with-gap" name="question_one" type="radio" id="agree_1" value="agree" required />
 					<label for="agree_1">Agree</label>
 				</p>
 				<p>
@@ -90,7 +88,7 @@ require 'connection/connection.php';
         	<div class="input-field col s12">
         		<p>2. My job made good use of my skills:</p>
 				<p>
-					<input class="with-gap" name="question_two" type="radio" id="agree_2" value="agree" />
+					<input class="with-gap" name="question_two" type="radio" id="agree_2" value="agree" required />
 					<label for="agree_2">Agree</label>
 				</p>
 				<p>
@@ -108,7 +106,7 @@ require 'connection/connection.php';
         	<div class="input-field col s12">
         		<p>3. I was satisfied with my opportunity to develop new skills:</p>
 				<p>
-					<input class="with-gap" name="question_three" type="radio" id="agree_3" value="agree" />
+					<input class="with-gap" name="question_three" type="radio" id="agree_3" value="agree" required/>
 					<label for="agree_3">Agree</label>
 				</p>
 				<p>
@@ -126,7 +124,7 @@ require 'connection/connection.php';
         	<div class="input-field col s12">
         		<p>4. I felt encourage to come up with better ways of doing things:</p>
 				<p>
-					<input class="with-gap" name="question_four" type="radio" id="agree_4" value="agree" />
+					<input class="with-gap" name="question_four" type="radio" id="agree_4" value="agree" required />
 					<label for="agree_4">Agree</label>
 				</p>
 				<p>
@@ -144,7 +142,7 @@ require 'connection/connection.php';
         	<div class="input-field col s12">
         		<p>5. I was satisfied with my opportunity to get a better job in the dealership:</p>
 				<p>
-					<input class="with-gap" name="question_five" type="radio" id="agree_5" value="agree" />
+					<input class="with-gap" name="question_five" type="radio" id="agree_5" value="agree" required />
 					<label for="agree_5">Agree</label>
 				</p>
 				<p>
@@ -162,7 +160,7 @@ require 'connection/connection.php';
         	<div class="input-field col s12">
         		<p>6. I felt well informed about what was expected in my job:</p>
 				<p>
-					<input class="with-gap" name="question_six" type="radio" id="agree_6" value="agree" />
+					<input class="with-gap" name="question_six" type="radio" id="agree_6" value="agree" required />
 					<label for="agree_6">Agree</label>
 				</p>
 				<p>
@@ -180,7 +178,7 @@ require 'connection/connection.php';
         	<div class="input-field col s12">
         		<p>7. I was satisfied with the recognition I recieved for doing a good job:</p>
 				<p>
-					<input class="with-gap" name="question_seven" type="radio" id="agree_7" value="agree" />
+					<input class="with-gap" name="question_seven" type="radio" id="agree_7" value="agree" required />
 					<label for="agree_7">Agree</label>
 				</p>
 				<p>
@@ -198,7 +196,7 @@ require 'connection/connection.php';
         	<div class="input-field col s12">
         		<p>8. I was satisfied with the cooperation and communiction between my coworkers:</p>
 				<p>
-					<input class="with-gap" name="question_eight" type="radio" id="agree_8" value="agree" />
+					<input class="with-gap" name="question_eight" type="radio" id="agree_8" value="agree" required />
 					<label for="agree_8">Agree</label>
 				</p>
 				<p>
@@ -216,7 +214,7 @@ require 'connection/connection.php';
         	<div class="input-field col s12">
         		<p>9. My supervisor was considerate of my need to balance work and personal life:</p>
 				<p>
-					<input class="with-gap" name="question_nine" type="radio" id="agree_9" value="agree" />
+					<input class="with-gap" name="question_nine" type="radio" id="agree_9" value="agree" required />
 					<label for="agree_9">Agree</label>
 				</p>
 				<p>
@@ -234,7 +232,7 @@ require 'connection/connection.php';
         	<div class="input-field col s12">
         		<p>10. I received ongoing feedback that helped me improve my performance:</p>
 				<p>
-					<input class="with-gap" name="question_ten" type="radio" id="agree_10" value="agree" />
+					<input class="with-gap" name="question_ten" type="radio" id="agree_10" value="agree" required />
 					<label for="agree_10">Agree</label>
 				</p>
 				<p>
@@ -252,7 +250,7 @@ require 'connection/connection.php';
         	<div class="input-field col s12">
         		<p>11. Overall, I fell my supervisor did a good job:</p>
 				<p>
-					<input class="with-gap" name="question_eleven" type="radio" id="agree_11" value="agree" />
+					<input class="with-gap" name="question_eleven" type="radio" id="agree_11" value="agree" required />
 					<label for="agree_11">Agree</label>
 				</p>
 				<p>
@@ -270,7 +268,7 @@ require 'connection/connection.php';
         	<div class="input-field col s12">
         		<p>12. I would recommend Hutson Inc. as a good place to work:</p>
 				<p>
-					<input class="with-gap" name="question_twelve" type="radio" id="yes_12" value="yes" />
+					<input class="with-gap" name="question_twelve" type="radio" id="yes_12" value="yes" required />
 					<label for="yes_12">Yes</label>
 				</p>
 				<p>
@@ -282,7 +280,7 @@ require 'connection/connection.php';
 
         <div class="row">
 			<div class="input-field col s12">
-				<textarea id="why" class="materialize-textarea" name="why"></textarea>
+				<textarea id="why" class="materialize-textarea" name="why" required></textarea>
 				<label for="why">Why or why not:</label>
 			</div>
 		</div>
@@ -291,7 +289,7 @@ require 'connection/connection.php';
         	<div class="input-field col s12">
         		<p>13. How would you rate the total compensation & benefit package you received while working at Hutson In (Salary, Health Benefits, Vacation/Holidays, Retirement Program)?</p>
 				<p>
-					<input class="with-gap" name="question_thirteen" type="radio" id="below_average_13" value="below average" />
+					<input class="with-gap" name="question_thirteen" type="radio" id="below_average_13" value="below average" required />
 					<label for="below_average_13">Below Average</label>
 				</p>
 				<p>
@@ -319,7 +317,7 @@ require 'connection/connection.php';
 			</div>
 		</div>
 
-		<button class="btn waves-effect waves-light" type="submit" name="action">Submit
+		<button class="btn waves-effect waves-light green darken-4" type="submit" name="action">Submit
     		<i class="material-icons right">send</i>
   		</button>
 	</form>
@@ -329,6 +327,7 @@ require 'connection/connection.php';
 </div>
 
 <script type="text/javascript" src="js/bin/job-titles.js"></script>
+
 
 
 <?php include 'includes/footer.php';  ?>
