@@ -3,7 +3,7 @@
 
 $servername = "localhost"; //always localhost
 $username = "root"; //root on localhost
-$password = ""; //Password for MAMP is 'root' and XAMP is ''
+$password = "root"; //Password for MAMP is 'root' and XAMP is ''
 $dbname = "exitsurvey"; //exit survey when on localhost
 
 
